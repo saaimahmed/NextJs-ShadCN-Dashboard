@@ -43,10 +43,8 @@ const formSchema = z.object({
   location: z
     .string()
     .min(2, { message: "Location must be at least 2 characters long!" }),
-  role: z.enum(["admin", "user"], {
-    required_error: "Role is required!",
-    invalid_type_error: "Role must be either 'admin' or 'user'!",
-  }),
+
+  role: z.enum(["admin", "user"]),
 });
 
 export const EditUser = () => {
